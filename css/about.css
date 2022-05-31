@@ -1,0 +1,183 @@
+/* ====================================================== */
+/* ================== Achievement about ================= */
+/* ====================================================== */
+.about_achievement {
+  position: relative;
+  top: 5rem;
+}
+
+.about_achievement_container {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  gap: 5rem;
+}
+
+.about_achievement_right>p {
+  margin: 1.6rem 0 2.5rem;
+}
+
+.achievement_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.achievement_card {
+  background-color: var(--color-bg1);
+  padding: 1.6rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+.achievement_card:hover {
+  background-color: var(--color-bg2);
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+
+}
+
+.achievement_icon {
+  background: var(--color-danger);
+  padding: .2rem .6rem;
+  border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+  -moz-border-radius: .6rem;
+  -ms-border-radius: .6rem;
+  -o-border-radius: .6rem;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+.achievement_card:nth-child(2) .achievement_icon {
+  background: var(--color-warning);
+}
+
+.achievement_card:nth-child(3) .achievement_icon {
+  background: var(--color-success);
+}
+
+.achievement_card h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* ====================================================== */
+/* ================ Achievement about end =============== */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* ======================== Team ======================== */
+/* ====================================================== */
+.team {
+  background: var(--color-bg1);
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.team_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.team_member {
+  background-color: var(--color-bg2);
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in !important;
+  -moz-transition: all 0.4s ease-in !important;
+  -ms-transition: all 0.4s ease-in !important;
+  -o-transition: all 0.4s ease-in !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.team_member:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.team_member_image img {
+   filter: saturate(0);
+   -webkit-filter: saturate(0);
+   border-top-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+   transition: all 0.4s ease-in;
+   -webkit-transition: all 0.4s ease-in;
+   -moz-transition: all 0.4s ease-in;
+   -ms-transition: all 0.4s ease-in;
+   -o-transition: all 0.4s ease-in;
+}
+
+.team_member:hover .team_member_image img {
+  filter: saturate(1);
+  -webkit-filter: saturate(1);
+   border-top-left-radius: 0;
+   border-bottom-right-radius: 0;
+   border-top-right-radius: 1rem;
+   border-bottom-left-radius: 1rem;
+}
+
+.team_member_info * {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.team_member_info p {
+  color: var(--color-light);
+}
+
+.team_member_social_icon {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-primary);
+  border-radius: 1rem 0 0 1rem;
+  -webkit-border-radius: 1rem 0 0 1rem;
+  -moz-border-radius: 1rem 0 0 1rem;
+  -ms-border-radius: 1rem 0 0 1rem;
+  -o-border-radius: 1rem 0 0 1rem;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+}
+
+.team_member:hover .team_member_social_icon {
+  right: 0;
+}
+
+.team_member_social_icon a {
+  padding: .1rem .4rem;
+}
+
+/* ====================================================== */
+/* ====================== Team end ====================== */
+/* ====================================================== */

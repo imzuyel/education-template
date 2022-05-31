@@ -1,0 +1,699 @@
+/* TABLE OF CONTENTS */
+/* -------------------
+1.  General
+2.  Navbar
+3.  Banners
+4.  Accrordian Menu
+4.1 About
+4.2 Resume
+4.3 Portfolio
+4.4 Service
+4.5 Testimonial
+4.6 Blog
+4.7 Contact
+4.8 Footer
+---------------------*/
+
+/* 1 General */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-primary: #6c63ff;
+  --color-success: #00bf8e;
+  --color-warning: #f7c94b;
+  --color-danger: #f75842;
+  --color-danger-variant: rgba(247, 88, 66, .4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, .7);
+  --color-black: #000;
+  --color-bg: #1f2641;
+  --color-bg1: #2e3267;
+  --color-bg2: #424890;
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.7;
+  color: var(--color-white);
+  background: var(--color-bg);
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+a {
+  color: var(--color-white);
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: .8rem 1.2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+
+}
+
+.btn-primary {
+  background: var(--color-danger);
+  color: var(--color-white);
+}
+
+
+/* ====================================================== */
+/* ====================== Preloader ===================== */
+/* ====================================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eff0f4;
+  z-index: 15000;
+}
+
+.preloader.hide {
+  display: none;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -75px 0 0 -75px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: #f75842;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-top-color: #00bf8e;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid transparent;
+  border-top-color: #f75842;
+  animation: spin 1.5s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* ====================================================== */
+/* ==================== Preloader end =================== */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* ==================== Navbar Style ==================== */
+/* ====================================================== */
+nav {
+  background: transparent;
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+
+.nav_container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  display: none;
+}
+
+.nav_menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav_menu a {
+  font-size: 0.9rem;
+  transition: all .6s ease-in;
+  -webkit-transition: all .6s ease-in;
+  -moz-transition: all .6s ease-in;
+  -ms-transition: all .6s ease-in;
+  -o-transition: all .6s ease-in;
+}
+
+.nav_menu a:hover {
+  color: var(--color-bg2);
+}
+
+.window-scroll {
+  background: var(--color-primary);
+  box-shadow: 0 .2rem rgba(0, 0, 0, 0.3);
+}
+
+/* ====================================================== */
+/* ================== Navbara style end ================= */
+/* ====================================================== */
+
+
+
+/* ====================================================== */
+/* ==================== Header style ==================== */
+/* ====================================================== */
+
+header {
+  position: relative;
+  top: 5rem;
+  overflow: hidden;
+  height: 70vh;
+  margin-bottom: 5rem;
+}
+
+.header_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  height: 100%;
+}
+
+.header_left p {
+  margin: 1rem 0 2.4rem;
+}
+
+/* ====================================================== */
+/* ================== Header style end ================== */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* =================== Category style =================== */
+/* ====================================================== */
+
+.categories {
+  background-color: var(--color-bg1);
+  height: 32rem;
+}
+
+.categories h1 {
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.categories_container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+}
+
+.category_left {
+  margin-right: 4rem;
+}
+
+.category_left p {
+  margin: 1rem 0 3rem;
+}
+
+.category_right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.category {
+  background-color: var(--color-bg2);
+  padding: 2rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.category:hover {
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.category_icon {
+  background: var(--color-primary);
+  padding: .7rem;
+  border-radius: 0.9rem;
+  -webkit-border-radius: 0.9rem;
+  -moz-border-radius: 0.9rem;
+  -ms-border-radius: 0.9rem;
+  -o-border-radius: 0.9rem;
+}
+
+.category h5 {
+  margin: 2rem 0 1rem;
+}
+
+.category p {
+  font-size: 0.85rem;
+}
+
+.category:nth-child(odd) .category_icon {
+  background-color: var(--color-danger);
+}
+
+.category:nth-child(2) .category_icon {
+  background-color: var(--color-success);
+}
+
+.category:nth-child(2n+3) .category_icon {
+  background-color: var(--color-warning);
+}
+
+/* ====================================================== */
+/* ================= Category style end ================= */
+/* ====================================================== */
+
+/* ====================================================== */
+/* =================== Popular Courses ================== */
+/* ====================================================== */
+
+.courses {
+  margin-top: 10rem;
+}
+
+.courses_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.course {
+  background-color: var(--color-bg1);
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+}
+
+.course:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+.course_info {
+  padding: 1rem;
+}
+
+.course_info p {
+  margin: 1.2rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+/* ====================================================== */
+/* ================= Popular Courses end ================ */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* ====================== Question ====================== */
+/* ====================================================== */
+.questions {
+  background: var(--color-bg1);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.faqs_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.faq {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: var(--color-primary);
+  height: fit-content;
+  cursor: pointer;
+  transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -ms-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+}
+
+.faq h4 {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+
+.faq_icon {
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+
+.faq p {
+  margin-top: .8rem;
+  display: none;
+
+}
+
+.faq.open p {
+  display: block;
+}
+
+/* ====================================================== */
+/* ==================== Question  end =================== */
+/* ====================================================== */
+
+/* ====================================================== */
+/* ==================== Testimonials ==================== */
+/* ====================================================== */
+.testimonials {
+  /* overflow-x:hidden; */
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.testimonial_item {
+  padding-top: 2rem;
+}
+
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: .8rem solid var(--color-bg1);
+}
+
+.testimonial_info {
+  text-align: center;
+}
+
+.testimonial_body {
+  background-color: var(--color-primary);
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.testimonial_body::before {
+  content: '';
+  display: block;
+  background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary));
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: -1.5rem;
+  left: 45%;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.pagination_wrapper {
+  margin-top: 5rem;
+}
+
+/* ====================================================== */
+/* ================== Testimonials end ================== */
+/* ====================================================== */
+
+/* ====================================================== */
+/* ======================= Footer ======================= */
+/* ====================================================== */
+.footer {
+  background-color: var(--color-bg2);
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer_title p {
+  font-size: .9rem;
+}
+
+.footer_permalink,
+.footer_privacy,
+.footer_contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_container h3 {
+  margin-bottom: 1rem;
+}
+
+.footer_permalink a,
+.footer_privacy a,
+.footer_contact p {
+  padding: .3rem 0;
+}
+
+.social_icons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: .6rem;
+}
+
+.social_icons a img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+footer {
+  background-color: var(--color-bg2);
+
+}
+
+.copyright {
+  border-top: 1px solid var(--color-bg);
+  text-align: center;
+  padding: .5rem;
+}
+
+/* ====================================================== */
+/* ===================== Footer end ===================== */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* ===================== Back to top ==================== */
+/* ====================================================== */
+.back_to_top {
+  background: var(--color-danger);
+  border: 1px solid transparent;
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  bottom: 0;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s e;
+  -moz-transition: all 0.4s e;
+  -ms-transition: all 0.4s e;
+  -o-transition: all 0.4s e;
+  display:none;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+  z-index: 12;
+}
+.back_to_top.open{
+  display:inline-block;
+}
+.back_to_top:hover{
+    background: transparent;
+    border-color: var(--color-white);
+}
+.back_to_top i {
+  position: relative;
+  animation: backToTop .3s infinite;
+  -webkit-animation: backToTop 1s infinite;
+  transition: all .5s linear infinite;
+  -webkit-transition: all .5s linear infinite;
+  -moz-transition: all .5s linear infinite;
+  -ms-transition: all .5s linear infinite;
+  -o-transition: all .5s linear infinite;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  left: 3px;
+}
+
+@keyframes backToTop {
+  0% {
+    top: .8rem;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+/* ====================================================== */
+/* =================== Back to top end ================== */
+/* ====================================================== */
+

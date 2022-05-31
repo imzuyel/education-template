@@ -1,0 +1,340 @@
+/* ##################################################################### */
+/* ########################## Responsive Code ########################## */
+/* ##################################################################### */
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  header {
+    height: 52vh;
+    margin-bottom: 4rem;
+  }
+
+  .header_container {
+    gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  .categories {
+    height: auto;
+  }
+
+  .categories_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .category_left {
+    margin-right: 0;
+  }
+
+  .courses {
+    margin-top: 0;
+  }
+
+  .courses_container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .faqs_container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq {
+    padding: 1.5rem;
+  }
+
+  .footer_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  nav button {
+    display: block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+  }
+
+  nav button#close_menu_btn {
+    display: none;
+  }
+
+  .nav_menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav_menu li {
+    width: 100%;
+    height: 4rem;
+    animation: navAnimation 1s linear forwards;
+    -webkit-animation: navAnimation .4s linear forwards;
+    transform-origin: top right;
+    opacity: 0;
+  }
+
+  .nav_menu li:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .nav_menu li:nth-child(3) {
+    animation-delay: .3s;
+  }
+
+  .nav_menu li:nth-child(4) {
+    animation-delay: .4s;
+  }
+
+  @keyframes navAnimation {
+    0% {
+      transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+      -webkit-transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+      -moz-transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+      -ms-transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+      -o-transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+    }
+
+    100% {
+      transform: rotateZ(0) rotateX(0) scale(1);
+      -webkit-transform: rotateZ(0) rotateX(0) scale(1);
+      -moz-transform: rotateZ(0) rotateX(0) scale(1);
+      -ms-transform: rotateZ(0) rotateX(0) scale(1);
+      -o-transform: rotateZ(0) rotateX(0) scale(1);
+      opacity: 1;
+    }
+
+  }
+
+  .nav_menu li a {
+    background: var(--color-primary);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    place-items: center;
+  }
+
+  .nav_menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  .btn {
+    padding: .5rem 1rem;
+  }
+
+  .nav_menu {
+    right: 3%;
+  }
+
+  header {
+    height: 98vh;
+  }
+
+  .header_container {
+    grid-template-columns: 1fr;
+  }
+
+  .header_left p {
+    margin-bottom: 1.3rem;
+  }
+
+  .category_right {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+  }
+
+  .category {
+    padding: 1rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+  }
+
+  .category h5 {
+    margin: 1rem 0 .2rem;
+  }
+
+  .category p {
+    line-height: 1.2rem;
+  }
+
+  .category_icon {
+    margin-top: .4rem;
+    display: inline-block;
+    padding: .25rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+  }
+
+  .courses_container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial_body {
+    padding: 1.2rem;
+  }
+
+  .footer_container {
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+  }
+
+  .faq h4 {
+    line-height: 1rem;
+    font-size: .8rem;
+  }
+
+  .faq p {
+    font-size: .8rem;
+  }
+}
+
+/* ====================================================== */
+/* ==================== Home page end =================== */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* ===================== About page ===================== */
+/* ====================================================== */
+@media screen and (max-width: 1024px) {
+  .about_achievement_container {
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+  }
+
+  .team_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .about_achievement_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about_achievement_left {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .team_member_info * {
+    margin-bottom: 0;
+  }
+
+  .team_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .achievement_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about_achievement_container {
+    gap: 1rem;
+  }
+
+  .team_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team_member {
+    padding: 1rem;
+  }
+}
+
+/* ====================================================== */
+/* =================== About page end =================== */
+/* ====================================================== */
+
+
+/* ====================================================== */
+/* ==================== Contact Page ==================== */
+/* ====================================================== */
+@media screen and (max-width: 1024px) {
+  .contact{
+    padding: 0;
+  }
+  .contact_container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+  .contact_aside{
+    width: auto;padding: 1.5rem;
+    bottom: 0;
+  }
+  .contact_form{
+    align-self: center;
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (max-width: 780px){
+.contact_container {
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+}
+@media screen and (max-width: 600px){
+
+.form_name{
+  flex-direction: column;
+
+}
+.form_name input[type="text"]{
+  width: 100%;
+}
+
+}
+/* ====================================================== */
+/* ================== Contact Page end ================== */
+/* ====================================================== */
+
+/* ##################################################################### */
+/* ######################## Responsive Code end ######################## */
+/* ##################################################################### */
