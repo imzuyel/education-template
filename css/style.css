@@ -414,6 +414,8 @@ header {
 
 .courses {
   margin-top: 10rem;
+   overflow-x:hidden;
+   position: relative;
 }
 
 .courses_container {
@@ -458,6 +460,8 @@ header {
 .questions {
   background: var(--color-bg1);
   box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+  overflow-x:hidden;
+  position: relative;
 }
 
 .faqs_container {
@@ -509,7 +513,7 @@ header {
 /* ==================== Testimonials ==================== */
 /* ====================================================== */
 .testimonials {
-  /* overflow-x:hidden; */
+  overflow-x:hidden;
   position: relative;
   margin-bottom: 5rem;
 }
